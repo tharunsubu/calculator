@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: calculator-html
-  namespace: web
+  
 data:
   index.html: |
     <!DOCTYPE html>

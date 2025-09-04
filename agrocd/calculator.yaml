@@ -11,7 +11,7 @@ spec:
     path: argocd   # This folder should contain deployment.yaml, service.yaml, etc.
   destination:
     server: https://kubernetes.default.svc
-    namespace: web
+    namespace: 
   syncPolicy:
     automated:
       prune: true
