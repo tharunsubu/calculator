@@ -8,10 +8,7 @@ spec:
   source:
     repoURL: https://github.com/tharunsubu/calculator.git
     targetRevision: main
-    path: charts/calculator
-    helm:
-      valueFiles:
-        - values.yaml        # or add more, e.g., values-prod.yaml
+    path: DFG/calculator   # This folder should contain deployment.yaml, service.yaml, etc.
   destination:
     server: https://kubernetes.default.svc
     namespace: web
