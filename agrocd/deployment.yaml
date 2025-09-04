@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: calculator-deployment
-  
   labels:
     app: calculator
 spec:
@@ -16,7 +15,7 @@ spec:
         app: calculator
     spec:
       containers:
-        - name: nginx
+        - name: calculator
           image: nginx:alpine
           ports:
             - containerPort: 80
