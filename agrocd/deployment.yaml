@@ -15,7 +15,14 @@ spec:
         app: calculator
     spec:
       containers:
-        - name: calculator
-          image: tharunsubu/calculator:latest  # Change if using a different image
+        - name: nginx
+          image: nginx:alpine
           ports:
             - containerPort: 80
+          volumeMounts:
+            - name: html-volume
+              mountPath: /usr/share/nginx/html
+      volumes:
+        - name: html-volume
+          configMap:
+            name: calculator-html

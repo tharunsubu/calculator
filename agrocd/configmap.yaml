@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: calculator-html
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Calculator App</title>
+    </head>
+    <body>
+      <h1>Welcome to the Calculator App</h1>
+      <p>This is a sample static HTML page served using NGINX.</p>
+    </body>
+    </html>
