@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: calculator
-  namespace: argocd   # ArgoCD namespace
+  name: demo                # ✅ changed from "calculator"
+  namespace: argocd         # ArgoCD namespace (this stays as argocd)
 spec:
   project: default
 
   source:
     repoURL: 'https://github.com/tharunsubu/calculator.git'   # your Helm repo
     targetRevision: main        # branch or tag
-    path: helm            # path to chart in repo
+    path: helm                  # path to chart in repo
     helm:
-      releaseName: calculator
+      releaseName: demo         # ✅ release name also changed for consistency
       values: |
         replicaCount: 2
         service:
@@ -20,7 +20,7 @@ spec:
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: calculator       # app namespace
+    namespace: demo             # ✅ changed from "calculator"
 
   syncPolicy:
     automated:
