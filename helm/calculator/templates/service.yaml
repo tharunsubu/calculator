@@ -5,11 +5,10 @@ metadata:
   labels:
     {{- include "calculator.labels" . | nindent 4 }}
 spec:
-  type: {{ .Values.service.type }}
+  type: NodePort   # ✅ for Minikube
   ports:
-    - port: {{ .Values.service.port }}
-      targetPort: http
-      protocol: TCP
-      name: http
+    - port: 80
+      targetPort: 80
+      nodePort: 30080   # Fixed port for easy access
   selector:
     {{- include "calculator.selectorLabels" . | nindent 4 }}
