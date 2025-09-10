@@ -11,7 +11,7 @@ spec:
     targetRevision: main        # branch or tag
     path: helm                  # path to chart in repo
     helm:
-      releaseName: demo         # ✅ release name also changed for consistency
+      releaseName: calculator        # ✅ release name also changed for consistency
       values: |
         replicaCount: 2
         service:
