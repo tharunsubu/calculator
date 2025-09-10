@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: 'https://github.com/tharunsubu/calculator.git'   # your Helm repo
     targetRevision: main        # branch or tag
-    path: helm                  # path to chart in repo
+    path: helm/calculator                 # path to chart in repo
     helm:
       releaseName: calculator        # ✅ release name also changed for consistency
       values: |
